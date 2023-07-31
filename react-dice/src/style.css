@@ -1,0 +1,28 @@
+body{
+    margin: 10px;
+    background-color: rgb(9, 177, 9);
+}
+
+.dice-box{
+    display: flex;
+    justify-content: space-around;
+}
+.roll-dice{
+    height: 150px;
+    width: 200px;
+    color: azure;
+    background-color: black;
+    font-size: 50px;
+    border-radius: 10px;
+}
+
+.dice-box > div div{
+    border: solid black;
+    background-color: #ffff;
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

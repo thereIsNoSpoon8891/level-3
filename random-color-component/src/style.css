@@ -1,0 +1,14 @@
+div{
+    height: 200px;
+    width: 400px;
+    margin: auto;
+}
+
+button{
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: black;
+    color: aliceblue;
+    margin: auto;
+}

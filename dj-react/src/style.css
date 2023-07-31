@@ -1,0 +1,32 @@
+
+.square-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap ;
+    width: 500px;
+    margin: auto;
+}
+
+.square{
+    height: 200px;
+    width: 200px;
+    border: solid black 3px;
+    margin: 5px;
+    border-radius: 10%;
+    box-shadow: 10px 5px 5px rgb(72, 72, 72) ;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap ;
+    width: 500px;
+    margin: auto;
+}
+
+button{
+    height: 80px;
+    width: 100px;
+    border-radius: 10%;
+    margin: 5px;
+}

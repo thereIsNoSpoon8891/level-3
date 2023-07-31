@@ -1,0 +1,38 @@
+const readline = require('readline-sync');
+
+const input = readline.question('What phrase would you like to encrypt? ').toLowerCase();
+
+let shift = parseInt(readline.question('How many letters would you like to shift? '));
+
+encrypt(input)
+shiftLetters(shift)
+
+let letters = "abcdefghijklmnopqrstuvwxyz"
+
+let newLetters = ""
+
+function shiftLetters (shift){
+    for(i = 0; i < letters.length; i++){
+        let shifted = (i + shift) % letters.length;
+        newLetters += letters[shifted]
+    }
+}
+
+function encrypt (input){
+    let result = "";
+        for(i = 0; i < input.length; i++){
+            let index = letters.indexOf(input[i])
+            result += newLetters[index];
+        }
+        return decrypt(result)
+}
+
+function decrypt (input){
+    let result = "";
+        for(i = 0; i < input.length; i++){
+            let index = newLetters.indexOf(input[i]);
+            result += letters[index]
+        }
+        return console.log(result)
+
+}

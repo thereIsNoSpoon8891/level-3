@@ -1,0 +1,21 @@
+
+.header--container{
+display: flex;
+justify-content: center;
+}
+
+.header--title{
+    font-family: fantasy;
+    color: #ffff;
+    background-color: blueviolet;
+    font-size: 50px;
+    border-radius: 10px;
+}
+
+
+
+.friend-card{
+    border: solid 2px ;
+    justify-content: center;
+    
+}

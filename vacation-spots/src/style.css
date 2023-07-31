@@ -1,0 +1,33 @@
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    border: solid;
+    padding: 10px;
+}
+
+.money{
+    font-size: large;
+    color: green;
+}
+
+.winter{
+    background-color: rgb(90, 163, 185, .5);
+    
+}
+
+.fall{
+    background-color: rgb(239, 202, 92, .5);
+}
+
+.summer{
+    background-color: rgba(229, 84, 84, 0.5);
+}
+
+.spring{
+    background-color: rgba(247, 114, 240, 0.5);
+}
