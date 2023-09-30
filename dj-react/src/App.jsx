@@ -1,12 +1,40 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Square from './Square'
 import "./style.css"
+import bang from './sounds/9mm.mp3'
+import blaster from './sounds/blaster.mp3'
+import explode from './sounds/explosion.mp3'
 
 function App() {
-  const [colors, setColors] = useState(["black", "white", "white", "white"]) 
-  
 
-console.log(colors)
+  const [colors, setColors] = useState(["black", "white", "white", "white"]) 
+  const [playBang, setPlayBang] = useState(false)
+
+// console.log(colors)
+useEffect(() => {// one of the greats... with useEffect() hook
+  if(playBang){
+    const audio = new Audio(bang)
+    audio.play()
+
+    setTimeout(() => {
+      setPlayBang(false)
+    }, 1000)
+  }
+}, [playBang])
+
+const playSound = () => {
+  setPlayBang(true)
+}
+
+const playBlaster = () => {// one of the greats without useEffect
+  const audio = new Audio(blaster)
+  audio.play()
+}
+
+const boom = () => {
+  const audio = new Audio(explode)
+  audio.play()
+}
 
   const square = colors.map(colors => <Square backgroundColor={colors}/>)
   //  1. set backround color based on the array...
@@ -17,6 +45,7 @@ console.log(colors)
     setColors(
       colors.map(color => (color === "black" ? "white" : "black"))
     ) 
+    playSound()
   }
 
   function purple(){
@@ -28,6 +57,7 @@ console.log(colors)
     setColors(
           purpleArray
     )
+    playBlaster()
   }
   function bottomLeft(){
     const bottomLeftSquare = [...colors]
@@ -37,6 +67,7 @@ console.log(colors)
     setColors(
       bottomLeftSquare
     )
+    boom()
   }
 
   function bottomRight(){
