@@ -13,7 +13,7 @@ const {number, holdDie, id, hold} = props;
 return (
 
 <div 
-className={ hold ? "selected-die" : "die"}
+className={hold ? "selected-die" : "die"}
 onClick={()=>holdDie(id)}
 >
     {number}
