@@ -26,3 +26,14 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+.selected-die{
+    border: solid rgb(225, 231, 52);
+    background-color: #ffff;
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

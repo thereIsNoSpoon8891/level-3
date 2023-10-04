@@ -6,20 +6,21 @@
 
 const Die = props => {
  
-const {number, holdDie, id} = props;
+const {number, holdDie, id, hold} = props;
 
 
 // console.log(number);
 return (
 
 <div 
-className="die"
+className={ hold ? "selected-die" : "die"}
 onClick={()=>holdDie(id)}
 >
-
-{number}
-
+    {number}
 </div>
+
+
+
 )
 }
 
