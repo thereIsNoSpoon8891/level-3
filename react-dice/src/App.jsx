@@ -31,13 +31,12 @@ function App() {
   const [numbers, setNumbers] = useState(dice)
 
 
-
   function roll () {
 
 
     if(rolls <= 3){
-      setRolls(prevRolls => prevRolls + 1)
-
+      
+    setRolls(prevRolls => prevRolls + 1)
 
     setNumbers(prevNums => {
 

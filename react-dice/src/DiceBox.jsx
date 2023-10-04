@@ -9,8 +9,8 @@ const {roll, numbers, holdDie} = props;
 const dice = numbers.map(obj => {
 
 return <Die 
-number = {obj.num} 
 holdDie = {holdDie} 
+number = {obj.num} 
 hold = {obj.hold}
 key = {obj.id}
 id = {obj.id}
