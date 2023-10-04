@@ -1,56 +1,31 @@
-import { useState } from 'react'
+import Die from './Die'
 import "./style.css"
 
-function DiceBox (){
+function DiceBox (props) {// review unified state lesson!
     
-    const [numbers, setNumbers] = useState([1, 2, 5, 6, 3])
+const {roll, numbers, holdDie} = props;
 
 
-    function roll (){
-        
-        setNumbers(oldNumbers => oldNumbers.map(number => number = Math.floor(Math.random() * 6) + 1))
-        
-        return numbers
-    }
-        let [a, b, c, d, e] = numbers
+const dice = numbers.map(obj => {
+
+return <Die 
+number = {obj.num} 
+holdDie = {holdDie} 
+hold = {obj.hold}
+key = {obj.id}
+id = {obj.id}
+/>
+})
+
     return(
         <div className='dice-box'>
             <div>
                 <button className='roll-dice' onClick={roll}>
                     ROLL DICE
                 </button>
-            </div>
 
-            <div>
-                <div>
-                    {a}
-                </div>
             </div>
-
-            <div>
-                <div>
-                    {b}
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    {c}
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    {d}
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    {e}
-                </div>
-            </div>
-
+        {dice}
         </div>
     )
 }

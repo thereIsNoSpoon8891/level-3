@@ -16,7 +16,7 @@ body{
     border-radius: 10px;
 }
 
-.dice-box > div div{
+.die{
     border: solid black;
     background-color: #ffff;
     height: 100px;
